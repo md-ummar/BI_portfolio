@@ -39,9 +39,8 @@ function Navbar() {
 
   const handleNavClick = (path) => {
     setNavbarOpen(false);
-    if (!isOnMainPage) {
-      navigate(`/#${path}`);
-    } else {
+
+    if (isOnMainPage) {
       const section = document.getElementById(path);
       if (section) {
         window.scrollTo({
@@ -49,6 +48,18 @@ function Navbar() {
           behavior: "smooth",
         });
       }
+    } else {
+      // This ensures that when clicking on a nav link from a different page, it scrolls to the section
+      navigate(`/`);
+      setTimeout(() => {
+        const section = document.getElementById(path);
+        if (section) {
+          window.scrollTo({
+            top: section.offsetTop - navbarHeight,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
     }
   };
 
@@ -58,7 +69,7 @@ function Navbar() {
         scrolling || navbarOpen ? "bg-neutral-900" : "bg-transparent"
       } transition-all`}
     >
-      <div className="flex container items-center justify-between c mx-auto px-4">
+      <div className="flex container items-center justify-between mx-auto px-4">
         <RouterLink
           to="/"
           onClick={handleLogoClick}

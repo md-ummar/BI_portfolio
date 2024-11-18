@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"; // To fetch project ID from the URL
 import { PROJECTS } from "../constants/index.js";
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa"; // Import GitHub icon from react-icons
 
 function ProjectDetail() {
   const { id } = useParams(); // Get project ID from URL params
@@ -17,7 +18,7 @@ function ProjectDetail() {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="text-4xl font-bold text-center mb-6" // Made the title larger and bold
+        className="text-4xl font-bold text-center mb-6"
       >
         {project.title}
       </motion.h1>
@@ -28,10 +29,10 @@ function ProjectDetail() {
           className="w-full h-96 bg-cover bg-center rounded-lg"
           style={{
             backgroundImage: `url(${project.image})`,
-            backgroundSize: "contain", // Ensure the entire image fits within the container
-            backgroundRepeat: "no-repeat", // Prevent repetition of the image
-            backgroundPosition: "center", // Keep the image centered
-            objectFit: "contain", // Maintain aspect ratio without cropping or stretching
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            objectFit: "contain",
           }}
         ></div>
 
@@ -80,11 +81,21 @@ function ProjectDetail() {
           </ul>
         </div>
 
-        {/* Links */}
-        <div>
-          <h5 className="text-xl text-teal-400 mb-3">Links:</h5>
-          {/* Add any relevant project links here */}
-        </div>
+        {/* GitHub Link Button */}
+        {project.githubLink && (
+          <div className="mt-6">
+            <a
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-teal-500 text-white rounded-md hover:bg-teal-600"
+            >
+              <FaGithub className="w-6 h-6 mr-2" />{" "}
+              {/* Use GitHub icon from react-icons */}
+              View on GitHub
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
