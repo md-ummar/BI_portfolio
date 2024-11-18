@@ -1,4 +1,5 @@
 import marketing1 from "../assets/images/marketingPrj_1.png";
+import sales1 from "../assets/images/salesPrj1.png";
 
 export const HERO_CONTENT = `With a deep passion for transforming data into compelling narratives and a proven ability to collaborate seamlessly with cross-functional teams, I excel at delivering impactful insights that drive informed decisions.`;
 
@@ -60,27 +61,27 @@ export const PROJECTS = [
       "Target High-Performing Product Categories: Focus marketing efforts on products with demonstrated high conversion rates.Implement seasonal promotions or personalized campaigns during peak months (e.g., January and September) to capitalize on these trends.",
       "Revitalize Content Strategy: To turn around declining views and low interaction rates, experiment with more engaging content formats, such as interactive videos or user-generated content.",
     ],
-    links: [],
+    githubLink: "https://github.com/md-ummar/Marketing-Analysis",
   },
-  // {
-  //   id: 2,
-  //   title: "Sales Dashboard",
-  //   description:
-  //     "An online retail business, is facing reduced customer engagement and conversion rates despite launching several new online marketing campaigns. conduct a detailed analysis and identify areas for improvement in their marketing strategies.",
-  //   image: marketing1,
+  {
+    id: 2,
+    title: "Sales Dashboard",
+    description:
+      "The project aims to transition from static sales reports to interactive and visual dashboards, enabling a more dynamic and detailed analysis of sales performance. The key focus areas will include tracking sales data across various product categories, monitoring customer purchases, and analyzing sales performance over time.",
+    image: sales1,
 
-  //   technologies: ["SQL", "Power BI", "Python", "DAX"],
-  //   objectives: [
-  //     "Increase Conversion Rates: Identify factors impacting the conversion rate and provide recommendations to improve it.",
-  //     "Enhance Customer Engagement: Determine which types of content drive the highest engagement.",
-  //     "Improve Customer Feedback Scores: Understand common themes in customer reviews and provide actionable insights.",
-  //   ],
-  //   outcomes: [
-  //     "Target High-Performing Product Categories: Focus marketing efforts on products with demonstrated high conversion rates.Implement seasonal promotions or personalized campaigns during peak months (e.g., January and September) to capitalize on these trends.",
-  //     "Revitalize Content Strategy: To turn around declining views and low interaction rates, experiment with more engaging content formats, such as interactive videos or user-generated content.",
-  //   ],
-  //   links: [],
-  // },
+    technologies: ["SQL", "Power BI", "SQL Server"],
+    objectives: [
+      "Track Sales Performance: Provide insights into how much of each product has been sold, which customers are purchasing those products, and how sales have evolved over time.",
+      "Budget Comparison: Compare actual sales performance against the budget (2021 data) to assess how well sales are tracking relative to expectations.",
+      "Historical Data Analysis: Focus on sales data from the past two years for meaningful trend analysis and performance reviews.",
+    ],
+    outcomes: [
+      "Improved Decision Making: By comparing actual sales to budgeted figures, decision-makers can identify areas for improvement and allocate resources more effectively.",
+      "Historical Trends: Analyzing sales data over the past two years will reveal trends, seasonality, and growth patterns, which can be used to inform future sales strategies.",
+    ],
+    githubLink: "https://github.com/md-ummar/Sales-data-Analysis",
+  },
 ];
 
 //To add contact details if required
