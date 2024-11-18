@@ -23,8 +23,8 @@ export const EXPERIENCES = [
       "Presented findings and strategic recommendations to stakeholders and senior management, effectively translating technical data into actionable insights.",
     ],
     keyAchievements: [
-      "Spearheaded an ETL process redesign that reduced data load time by 30%.",
-      "Received recognition for implementing data solutions that improved monthly report generation by 40%.",
+      "Spearheaded an ETL process redesign that reduced data load time by 15%.",
+      "Received recognition for implementing data solutions that improved monthly report generation by 25%.",
     ],
   },
   {
@@ -83,10 +83,3 @@ export const PROJECTS = [
     githubLink: "https://github.com/md-ummar/Sales-data-Analysis",
   },
 ];
-
-//To add contact details if required
-// export const CONTACT = {
-//   address: "767 Fifth Avenue, New York, NY 10153 ",
-//   phoneNo: "+12 4555 666 00 ",
-//   email: "me@example.com",
-// };
