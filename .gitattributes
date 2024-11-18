@@ -1,0 +1,9 @@
+* text=auto
+*.js eol=lf
+*.jsx eol=lf
+*.cjs eol=lf
+*.md eol=lf
+*.html eol=lf
+*.json eol=lf
+*.css eol=lf
+*.config.js eol=lf
