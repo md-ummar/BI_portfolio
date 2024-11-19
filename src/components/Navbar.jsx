@@ -110,7 +110,7 @@ function Navbar() {
                 </li>
               ))}
               <a
-                href={"/md_ummar_bi.pdf"}
+                href="/md_ummar_bi.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border-2 border-teal-500 text-teal-500 font-semibold hover:bg-teal-500 hover:text-white rounded-lg"
@@ -135,7 +135,7 @@ function Navbar() {
               </li>
             ))}
             <a
-              href={"/md_ummar_bi.pdf"}
+              href="/md_ummar_bi.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border-2 border-teal-500 text-teal-500 font-semibold hover:bg-teal-500 hover:text-white rounded-lg"
