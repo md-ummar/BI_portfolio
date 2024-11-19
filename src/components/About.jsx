@@ -1,6 +1,5 @@
 import { ABOUT_TEXT } from "../constants/index";
 import { motion } from "framer-motion";
-import professionalPhoto from "/professionalpic.jpg"; // Add the path to your professional photo
 
 function About() {
   return (
@@ -37,7 +36,7 @@ function About() {
           <div className="h-[370px] w-[270px] rounded-lg border-2 border-teal-200 p-1 shadow-lg mb-10">
             {/* Replace Lottie with an image */}
             <img
-              src={professionalPhoto}
+              src={"/Professionalpic.jpg"}
               alt="Professional"
               className="h-full w-full object-contain rounded-lg"
             />
