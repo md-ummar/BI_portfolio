@@ -1,7 +1,6 @@
 import { ABOUT_TEXT } from "../constants/index";
 import { motion } from "framer-motion";
-import Lottie from "lottie-react";
-import aboutAni from "../assets/aboutAni.json";
+import professionalPhoto from "../assets/images/professionalpic.jpg"; // Add the path to your professional photo
 
 function About() {
   return (
@@ -23,7 +22,7 @@ function About() {
           className="w-full lg:w-2/3"
         >
           {/* Render ABOUT_TEXT as bullet points */}
-          <ul className="  space-y-4 text-lg leading-relaxed pr-5">
+          <ul className="space-y-4 text-lg leading-relaxed pr-5">
             {ABOUT_TEXT.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
@@ -33,10 +32,15 @@ function About() {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5 }}
-          className="w-full lg:w-1/3 flex justify-center lg:justify-center lg:mt-0 mt-10  "
+          className="w-full lg:w-1/3 flex justify-center lg:justify-center lg:mt-0 mt-10"
         >
-          <div className="h-[350px] w-[250px] rounded-lg border-4 border-teal-500 p-1 shadow-lg mb-10 ">
-            <Lottie animationData={aboutAni} loop={true} />
+          <div className="h-[370px] w-[270px] rounded-lg border-2 border-teal-200 p-1 shadow-lg mb-10">
+            {/* Replace Lottie with an image */}
+            <img
+              src={professionalPhoto}
+              alt="Professional"
+              className="h-full w-full object-contain rounded-lg"
+            />
           </div>
         </motion.div>
       </div>

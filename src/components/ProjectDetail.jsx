@@ -12,42 +12,46 @@ function ProjectDetail() {
   }
 
   return (
-    <div className="p-8 bg-neutral-950 text-white m-10">
+    <div className="p-4 md:p-8 bg-neutral-950 text-white mt-16 md:mt-20">
+      {" "}
+      {/* Adjusted margin-top for spacing from navbar */}
       {/* Title */}
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="text-4xl font-bold text-center mb-6"
+        className="text-2xl md:text-4xl font-bold text-center mb-4 md:mb-6"
       >
         {project.title}
       </motion.h1>
-
-      <div className="max-w-4xl mx-auto space-y-8 ">
+      <div className="max-w-2xl md:max-w-4xl mx-auto space-y-6 md:space-y-8">
         {/* Image */}
         <div
-          className="w-full h-96 bg-cover bg-center rounded-lg"
+          className="w-full h-64 md:h-96 bg-cover bg-center rounded-lg"
           style={{
             backgroundImage: `url(${project.image})`,
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            objectFit: "contain",
           }}
         ></div>
 
         {/* Project Overview */}
-        <div>
-          <h4 className="text-2xl text-teal-300 ">Project Overview</h4>
-          <p className="text-neutral-400 mt-4">{project.description}</p>
+        <div className="px-2 md:px-0">
+          <h4 className="text-xl md:text-2xl text-teal-300">
+            Project Overview
+          </h4>
+          <p className="text-neutral-400 mt-2 md:mt-4">{project.description}</p>
         </div>
 
         {/* Objectives */}
-        <div>
-          <h5 className="text-xl text-teal-400 mb-3">Objectives:</h5>
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+        <div className="px-2 md:px-0">
+          <h5 className="text-lg md:text-xl text-teal-400 mb-2 md:mb-3">
+            Objectives:
+          </h5>
+          <ul className="list-disc list-inside text-neutral-400 space-y-1 md:space-y-2">
             {project.objectives.map((objective, index) => (
-              <li key={index} className="text-base">
+              <li key={index} className="text-sm md:text-base">
                 {objective}
               </li>
             ))}
@@ -55,13 +59,15 @@ function ProjectDetail() {
         </div>
 
         {/* Technologies Used */}
-        <div>
-          <h5 className="text-xl text-teal-400 mb-3">Technologies Used:</h5>
+        <div className="px-2 md:px-0">
+          <h5 className="text-lg md:text-xl text-teal-400 mb-2 md:mb-3">
+            Technologies Used:
+          </h5>
           <div className="flex gap-2 flex-wrap">
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="bg-neutral-800 text-teal-400 px-3 py-2 rounded-full text-xs"
+                className="bg-neutral-800 text-teal-400 px-3 py-1 md:py-2 rounded-full text-xs md:text-sm"
               >
                 {tech}
               </span>
@@ -70,11 +76,13 @@ function ProjectDetail() {
         </div>
 
         {/* Insights/Outcome */}
-        <div>
-          <h5 className="text-xl text-teal-400 mb-3">Insights / Outcome:</h5>
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+        <div className="px-2 md:px-0">
+          <h5 className="text-lg md:text-xl text-teal-400 mb-2 md:mb-3">
+            Insights / Outcome:
+          </h5>
+          <ul className="list-disc list-inside text-neutral-400 space-y-1 md:space-y-2">
             {project.outcomes.map((outcome, index) => (
-              <li key={index} className="text-base">
+              <li key={index} className="text-sm md:text-base">
                 {outcome}
               </li>
             ))}
@@ -83,15 +91,15 @@ function ProjectDetail() {
 
         {/* GitHub Link Button */}
         {project.githubLink && (
-          <div className="mt-6">
+          <div className="mt-4 md:mt-6 px-2 md:px-0">
             <a
               href={project.githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-teal-500 text-white rounded-md hover:bg-teal-600"
+              className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 bg-teal-500 text-white rounded-md hover:bg-teal-600"
             >
-              <FaGithub className="w-6 h-6 mr-2" />{" "}
-              {/* Use GitHub icon from react-icons */}
+              <FaGithub className="w-5 h-5 md:w-6 md:h-6 mr-2" />{" "}
+              {/* Responsive icon sizing */}
               View on GitHub
             </a>
           </div>

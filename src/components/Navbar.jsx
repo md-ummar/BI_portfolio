@@ -134,11 +134,12 @@ function Navbar() {
               </li>
             ))}
             <a
-              href="/path/to/your/resume.pdf"
-              download
-              className="ml-4 px-4 py-2 border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white rounded-lg"
+              href={"/md_ummar_bi.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border-2 border-teal-500 text-teal-500 font-semibold hover:bg-teal-500 hover:text-white rounded-lg"
             >
-              Resume
+              View Resume
             </a>
           </ul>
         </div>
