@@ -1,6 +1,6 @@
 import { ABOUT_TEXT } from "../constants/index";
 import { motion } from "framer-motion";
-import professionalPhoto from "../assets/images/professionalpic.jpg"; // Add the path to your professional photo
+import professionalPhoto from "/professionalpic.jpg"; // Add the path to your professional photo
 
 function About() {
   return (
